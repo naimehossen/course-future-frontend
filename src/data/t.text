@@ -1,0 +1,181 @@
+<nav className="bg-gray-800 text-white">
+      <ul className="flex">
+        {/* মেনু আইটেম */}
+        <li className="relative group">
+          <button className="px-4 py-2 hover:bg-blue-500 flex items-center gap-1">
+            পণ্য <span>▼</span>
+          </button>
+          
+          {/* প্রথম লেভেল ড্রপডাউন */}
+          <div className="absolute hidden group-hover:block bg-white text-black shadow-lg min-w-[200px]">
+            
+            {/* ইলেকট্রনিক্স (নেস্টেড) */}
+            <div className="relative group/item">
+              <a href="#" className="px-4 py-2 hover:bg-blue-500 hover:text-white flex justify-between items-center">
+                ইলেকট্রনিক্স <span>▶</span>
+              </a>
+              
+              {/* দ্বিতীয় লেভেল */}
+              <div className="absolute hidden group-hover/item:block left-full top-0 bg-white shadow-lg min-w-[180px]">
+                
+                {/* মোবাইল (আরও নেস্টেড) */}
+                <div className="relative group/mobile">
+                  <a href="#" className="px-4 py-2 hover:bg-blue-500 hover:text-white flex justify-between">
+                    মোবাইল <span>▶</span>
+                  </a>
+                  
+                  {/* তৃতীয় লেভেল - শেষ লেভেল, ক্লিক করলে যাবে */}
+                  <div className="absolute hidden group-hover/mobile:block left-full top-0 bg-white shadow-lg min-w-[150px]">
+                    <a href="/samsung" className="block px-4 py-2 hover:bg-green-500 hover:text-white">স্যামসাং</a>
+                    <a href="/iphone" className="block px-4 py-2 hover:bg-green-500 hover:text-white">আইফোন</a>
+                    <a href="/xiaomi" className="block px-4 py-2 hover:bg-green-500 hover:text-white">শাওমি</a>
+                  </div>
+                </div>
+                
+                {/* ল্যাপটপ */}
+                <div className="relative group/laptop">
+                  <a href="#" className="px-4 py-2 hover:bg-blue-500 hover:text-white flex justify-between">
+                    ল্যাপটপ <span>▶</span>
+                  </a>
+                  
+                  <div className="absolute hidden group-hover/laptop:block left-full top-0 bg-white shadow-lg min-w-[150px]">
+                    <a href="/hp" className="block px-4 py-2 hover:bg-green-500 hover:text-white">HP</a>
+                    <a href="/dell" className="block px-4 py-2 hover:bg-green-500 hover:text-white">Dell</a>
+                    <a href="/macbook" className="block px-4 py-2 hover:bg-green-500 hover:text-white">MacBook</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* পোশাক */}
+            <div className="relative group/cloth">
+              <a href="#" className="px-4 py-2 hover:bg-blue-500 hover:text-white flex justify-between">
+                পোশাক <span>▶</span>
+              </a>
+              
+              <div className="absolute hidden group-hover/cloth:block left-full top-0 bg-white shadow-lg min-w-[150px]">
+                <a href="/shirt" className="block px-4 py-2 hover:bg-green-500 hover:text-white">শার্ট</a>
+                <a href="/pant" className="block px-4 py-2 hover:bg-green-500 hover:text-white">প্যান্ট</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li><a href="/about" className="px-4 py-2 hover:bg-blue-500 block">আমাদের সম্পর্কে</a></li>
+        <li><a href="/contact" className="px-4 py-2 hover:bg-blue-500 block">যোগাযোগ</a></li>
+      </ul>
+    </nav>
+
+
+
+    import React, { lazy } from "react";
+import { popularCourses } from '../data/coursesData';
+import { HiMiniChevronDown } from "react-icons/hi2";
+import { LuLightbulb } from "react-icons/lu";
+
+// আপনার assets ফোল্ডার থেকে পাঠানো ইমেজটি ইম্পোর্ট করা হলো
+import heroBg from "./../assets/ai_img.jpg"; 
+
+const Navbar = lazy(() => import("../components/layout/Navber"));
+const Footer = lazy(() => import("../components/layout/Footer"));
+
+const Home = () => {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+      <Navbar />
+      
+      {/* ইমেজের ব্যাকগ্রাউন্ড সহ প্রিমিয়াম হিরো সেকশন */}
+      <section 
+        className="relative bg-cover bg-center py-28 lg:py-40 text-white overflow-hidden"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        {/* ব্যাকগ্রাউন্ড ওভারলে - ইমেজ ও লেখার কম্বিনেশন সুন্দর করার জন্য */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-indigo-950/70 z-0"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="max-w-3xl text-left">
+            <span className="inline-flex items-center gap-1.5 bg-blue-500/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+              100% Online Training 🔥
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mt-6 leading-tight">
+              Get Ready for the Jobs of <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400">
+                Today and Tomorrow! ⌚
+              </span>
+            </h1>
+            <p className="text-slate-300 text-base sm:text-lg mt-6 max-w-xl font-medium leading-relaxed">
+              Empowering minds with AI, Robotics, Data Intelligence and Smart Systems for a smarter tomorrow. Master global on-demand IT skills.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+              <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl shadow-blue-600/30">
+                Start Building Your Career Right Now!
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* জনপ্রিয় কোর্স গ্রিড */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="mb-12">
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+            NEW LAUNCH 🎉
+          </h2>
+          <p className="text-slate-500 text-sm mt-1">Explore our hot and trending newly launched masterclasses.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {popularCourses.map((course, index) => (
+            <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between group cursor-pointer">
+              <div>
+                <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md uppercase tracking-wide">
+                  {course.category}
+                </span>
+                <h3 className="text-lg font-bold text-slate-900 mt-4 group-hover:text-blue-600 transition-colors">
+                  {course.title}
+                </h3>
+              </div>
+              <div className="flex items-center justify-between border-t border-slate-100 pt-4 mt-6">
+                <div className="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                  ★ {course.rating}
+                </div>
+                <div className="text-xs font-semibold text-slate-400">
+                  {course.students} Students
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* স্টুডেন্ট রিভিউ */}
+      <section className="bg-slate-100 py-20 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-slate-900 mb-12">A few of our students 👨‍🎓</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <p className="text-slate-600 italic text-sm leading-relaxed">"The trainer gives knowledge of all topics through practical projects."</p>
+              <h4 className="font-bold text-slate-900 text-sm mt-4">— Alamara Jamadar</h4>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <p className="text-slate-600 italic text-sm leading-relaxed">"The interactive learning framework with direct lab support has been extremely satisfying."</p>
+              <h4 className="font-bold text-slate-900 text-sm mt-4">— Paul Aldred</h4>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <p className="text-slate-600 italic text-sm leading-relaxed">"Immeasurable enterprise class content. The industry expert tutors have premium subject clarity."</p>
+              <h4 className="font-bold text-slate-900 text-sm mt-4">— Kalakota V.</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+
