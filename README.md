@@ -1,16 +1,72 @@
-# React + Vite
+Course Future - Frontend
+🚀 Live Demo
+🌐 Live Site: https://course-future-frontend-av2y.onrender.com/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📖 About The Project
+Course Future is a modern, full-featured online course platform built with React and Tailwind CSS. It provides a seamless learning experience with course browsing, detailed course pages, shopping cart functionality, and a complete checkout process.
 
-Currently, two official plugins are available:
+✨ Key Features
+Course Listing & Browsing - Browse through 50+ courses across multiple categories
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Course Details Page - Comprehensive course information with gallery and instructor details
 
-## React Compiler
+Shopping Cart System - Add/remove courses, quantity management, and price calculation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Checkout Process - 3-step checkout with form validation and payment simulation
 
-## Expanding the ESLint configuration
+Search Functionality - Search courses by title, category, or instructor
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Design - Optimized for all devices (mobile, tablet, desktop)
+
+User Authentication - Login and Sign up pages (UI ready)
+
+Corporate Training - Dedicated page for enterprise solutions
+
+Blog Section - Latest industry insights and updates
+
+Gallery - Visual representation of courses and events
+
+🛠️ Built With
+React - UI Library
+
+Vite - Build Tool
+
+Tailwind CSS - Styling
+
+React Router DOM - Navigation
+
+React Icons - Icon Library
+
+Context API - State Management (Cart)
+
+src/
+├── assets/          # Images and static files
+├── components/      # Reusable components
+│   ├── common/      # Common components
+│   ├── layout/      # Layout components (Navbar, Footer)
+│   └── ui/          # UI components
+├── context/         # Context providers
+├── data/            # Data files
+├── page/            # Page components
+└── service/         # Service functions
+
+Installation
+bash
+# Clone the repository
+git clone https://github.com/naimehossen/course-future-frontend.git
+
+# Navigate to project directory
+cd course-future-frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+Build for Production
+bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
